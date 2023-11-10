@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Online Medical Shop</title>
+    <style>
+      body{
+        background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAH4AvQMBIgACEQEDEQH/xAAZAAEBAQEBAQAAAAAAAAAAAAADAgQBAAX/xAAdEAEBAQEBAAMBAQAAAAAAAAAAAQISEQMTITFh/8QAGgEBAQEBAQEBAAAAAAAAAAAAAwIBBgQABf/EABoRAQEBAQEBAQAAAAAAAAAAAAABAhIDExH/2gAMAwEAAhEDEQA/APvYh8IxDYjwa83Ya0vEPiIxD4gNebza0vGTYicQ2YLXm8+tKxDYicZNjIr5vPrS8wkj2YTORXzefVdzFzL2YTwd8g6qPHvF+PeM+Yaio0WxFj75joqjRbEajOB0OoPUNZ4PT7kVDoWz6gtRvI6DQr/T6grP1v48+nyM5PjKMQ+I6nXm73W1Yh8RGIbEDrzefWiYyXETiGzA3yBrSsQ+IjMNiC15B1SZi8xzMJmfgr5g1VZivHsxfiL5iqZHvFePWM4FUWDsLYixNwijsRqFsTYjhFBqDsPYjUTwKs+oLUadQWss4Fpm1BWfrTrIrP1nANPk4hsRGYXMdlrzdndkzDZg8Q2ILXmLWi5hsweIXIb5huiZhswWTYgdeYrS5hMxGCZDfMdq8xcjmYodwK17xzxfifE8DqLE2FsRYnhFHYmwtiLE/NFFYjUNYixPzHQXKNZaLB6jPmOs2siuf1qsDqfqb5vPp8TMNmCyXLsbl1N2XENgWf6XIdZRdGwXIsFyHWR3RslyLJciuUWlyXIslzRayO0mSZHksFcJrrninB8oRYmrqazkdRXLF1FZymos8TVaTU3I6iweiUWqy5FaPQr/AEuhX+isefT4eS5Dkua6yujuj5LgGf4XItIumjBc0GaSUViLo+aXNZ5SZ1BWIumnOiSs82ubHYO6ac0k0yzapodym6au3u2ftztHLOj3SbRXbnTOUXRbU2ju03aeUXRLUWouk3SblF0q0enLpN0i5FquaFf6rVHq/o7Aar4eaWXwGaSadRY/duj5pc6Zs6XNDsHdtWdrm2WbXNouUXTXna87ZZtc2O5Rdtc2vO2SbVNouE9Nk2qbY5tU2i4T02fY92y9vdp4T01dOdM/bnbLhl00dOXQO3u0XKLo3SehduXaLlF0S6TaO6c6HcjtVqotcuk2i1kVr4nqpRdO+um/H7N0Wa/FTQOnZpnIrppm1zbLNKm0coumqbXNsk2qfIm4RdNk2ubYp8ip8ibhHTZNqnyMU+Rf2JuGXbX272x/Y7PkZwnpr7e7Zfsd+xNwy7ae3u2bt37B3Cemi7e7Z/se7HrKLo9050Ht6aFcpui9Pej6emg6yO18Z71KfXQv17V9PTQ/XOvFSC1TTX+vdh6c6fcjumjt2bZu3e33I7pqnyO/Z6yd16br7hF02T5P9dnysk27Np4T01z5P9VPkY+3e74y4Z02fY79n+sfddm03Cbps+z/AF37GSbdm6K5TdNfbvbLN13qjuGdNPapv8ZppU1+B1lnR5pU0zzSunn1lP6//9k=');
+        background-size: 500%;
+        background-repeat: no-repeat;
+      }
+    </style>
+</head>
+
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">Treat Yourself: Online Medicine Ordering System  </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Medicines Available <span class="sr-only">(current)</span></a>
+            </li>
+
+        </ul>
+
+        <ul class="navbar-nav my-2 my-lg-0">
+          <li class="nav-item ">
+            <a class="nav-link" href="/cart">Cart 
+              <span class="badge badge-info"> {{request.session.cart.keys|length}} </span>
+              <span class="sr-only">(current)</span></a>
+          </li>
+            {% if request.session.patient %}
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="/orders">Orders <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="/logout">Logout <span class="sr-only">(current)</span></a>
+            </li>
+            {% else %}
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="/signup">Sign-Up <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="/login">Login <span class="sr-only">(current)</span></a>
+            </li>
+            {% endif %}
+            
+
+            <!-- <form class="form-inline ">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form> -->
+            <!-- <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Profile
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li> -->
+
+    </div>
+</nav>
+
+{% block content %}{% endblock %}
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+</html>
+
+

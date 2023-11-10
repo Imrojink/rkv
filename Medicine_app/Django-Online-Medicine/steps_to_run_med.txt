@@ -1,0 +1,16 @@
+1. Go to Project Directory 
+	cd 
+2. Create a Virtual Environment 
+	mkvirtualenv env
+3. Activate Virtual Environment 
+	workon env
+4. Install Requirements Package 
+	pip install django
+	pip install pillow
+
+5. Migrate Database 
+	python manage.py makemigrations
+	python manage.py migrate
+
+6. Finally Run The Project 
+	python manage.py runserver
